@@ -1,0 +1,22 @@
+def index
+  Flight.all
+end
+  def find(var1)
+  @consulta=Flight.where(from_v:"#{var1[0]}",to_v:"#{var1[1]}")
+  #,date_v:"#{var1[2]}", passangers:"#{var1[3]}")
+  end
+
+  def seleccion(var1)
+ puts @consulta[var1]
+  end
+
+
+
+
+
+ def reservacion(var1,var2,var3,var4)
+booking = Booking.create(no_Vuelo: var1, from: var2 , to: var3 , date:, var4)
+    end
+    
+
+ end

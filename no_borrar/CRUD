@@ -1,0 +1,29 @@
+  def index
+    Flight.all
+  end
+
+  def create(var1,var2,var3,var4,var5,var6,var7,var8)
+    flight = Flight.new do |u|
+      u.no_Vuelo=var1
+      u.date=var2
+      u.departs=var3
+      u.from=var4
+      u.to=var5
+      u.duration=var6
+      u.precio=var7
+      u.passangers=var8
+    end
+    flight.save
+  end
+
+  def delete(var1,var2)
+    flight = Flight.find_by("#{var1}":+"#{var2}")
+    flight.destroy
+  end
+
+  def update(var1,var2,var3,var4)
+    #flight = Flight.find_by("#{var1}":+"#{var2}")
+    #flight."#{var3}" = "#{var4}"
+    #flight.save
+  end
+
